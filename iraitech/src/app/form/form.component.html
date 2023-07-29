@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div>
+    <label class="m-15" for="number">Enter phone number </label>
+    <input class="m-15"  type="number" id="number" name="phone1" ngModel required />
+    
+    <div>
+      <button  class="m-15" type="button" (click)="addAnother()">
+        Add another phone number
+      </button>
+    <input  type="number" *ngIf="add" name="phone2" ngModel required />
+
+    </div>
+  </div>
+
+
+  <br />
+  <button type="submit">Submit</button>
+</form>
